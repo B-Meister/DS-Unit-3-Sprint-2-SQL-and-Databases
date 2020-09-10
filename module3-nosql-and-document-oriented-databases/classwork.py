@@ -6,6 +6,7 @@ import dns
 How was working with MongoDB different from working with PostgreSQL?
 - The commands were different and NoSQL commands were more annoying
 especially after practicing SQL more and then just shifting gears
+But in the end, its not that different. 
 """
 
 conn = sqlite3.connect('rpg_db.sqlite3')
@@ -64,6 +65,12 @@ list(db.test.find({'even': True, 'value': 0}))
 # finds the first value because has two parameters
 list(db.test.find({'even': True}))
 # finds all evens - basically the SQL where function
+
+change = db.test.update_one({'x': 1}, {'$inc': {'x': 3}})
+# updates one instance of 'x': 1 by increasing 'x' by 3
+change.matched_count()
+change.modified_count()
+# does exactly what the function says
 
 if __name__ == "__main__":
     print(result)
