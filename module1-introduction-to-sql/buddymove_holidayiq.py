@@ -26,3 +26,7 @@ if __name__ == '__main__':
     curs.execute('SELECT COUNT (*) FROM buddy WHERE Nature > 99 AND Shopping > 99')
     print(f'There are {curs.fetchall()[0][0]} people who reviewed at least 100 '
           f'Nature AND Shopping locations')
+
+    # 3. What are the average number of review for each category?
+    # curs.execute('SELECT AVG COUNT (*) FROM buddy')
+    # print(f'{curs.fetchall()}')

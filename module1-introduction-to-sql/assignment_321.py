@@ -1,6 +1,5 @@
 import sqlite3
 
-
 def connect_to_db(db_name='rpg_db.sqlite3'):
     return sqlite3.connect(db_name)
 
@@ -54,6 +53,7 @@ LIMIT 20;
 """
 
 # COME BACK TO THIS - HOW DID I GET 137 AGAIN?
+# DB_Browser - all items above 137 are weapons
 
 # 6. How many weapons does each character have? - Return first 20
 weap_count_per_char = """
